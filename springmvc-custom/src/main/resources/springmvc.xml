@@ -5,12 +5,15 @@
 
     <bean class="com.ocbc.spring.mvc.maping.BeanNameUrlHandlerMapping"/>
     <bean class="com.ocbc.spring.mvc.maping.SimpleUrlHandlerMapping"/>
+    <bean class="com.ocbc.spring.mvc.maping.RequestMappingHandlerMapping"/>
 
     <bean class="com.ocbc.spring.mvc.adapter.SimpleControllerHandlerAdapter"/>
     <bean class="com.ocbc.spring.mvc.adapter.HttpRequestHandlerAdapter"/>
+    <bean class="com.ocbc.spring.mvc.adapter.RequestMappingHandlerAdapter"/>
 
-    <bean name="/queryUser" class="com.ocbc.spring.mvc.handler.QueryUserHandler"/>
-    <bean name="/saveUser" class="com.ocbc.spring.mvc.handler.SaveUserHandler"/>
+    <bean name="/queryUser" class="com.ocbc.spring.handler.QueryUserHandler"/>
+    <bean name="/saveUser" class="com.ocbc.spring.handler.SaveUserHandler"/>
+    <bean  class="com.ocbc.spring.controller.UserController"/>
 
 
 </beans>
